@@ -4,8 +4,13 @@
     margin: 15px;
 }
 
+.bd-img{
+    top: -18px;
+}
+
 .name{
     font-size: 53px;
+    font-weight: bold;
 }
 
 .label{

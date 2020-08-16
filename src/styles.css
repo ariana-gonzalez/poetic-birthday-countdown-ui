@@ -22,8 +22,8 @@ input:focus, .calendar:focus, button:focus{
 }
 
 .btn-submit{
-  height: 48px;
-  width: 220px;
+  height: 60px;
+  width: 230px;
   font-family: ubuntu;
   color: white;
   border-radius: 100px;
@@ -40,11 +40,11 @@ input:focus, .calendar:focus, button:focus{
 }
 
 ::-webkit-scrollbar-track{
-  background-color: #272633;
+  background-color: rgb(2, 119, 119);
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: darkcyan;
+  background-color:  #272633;
   border-radius: 100px;
 }
 

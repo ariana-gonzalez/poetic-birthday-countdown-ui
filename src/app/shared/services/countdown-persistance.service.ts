@@ -10,17 +10,8 @@ export class CountdownPersistanceService {
   private birthDate: string;
   private poem: Poem;
   private isBirthday: boolean;
-  private hasValue: boolean = false;
 
   constructor() { }
-
-  getHasValue(){
-    return this.hasValue;
-  }
-
-  setHasValue(val){
-    this.hasValue = val;
-  }
 
   getCountdownData(){
     return this.countdownData;
@@ -33,7 +24,6 @@ export class CountdownPersistanceService {
         this.poem = data.countdownResult
         this.isBirthday = true;
       }
-      this.hasValue = true;
     }
   }
 
@@ -51,5 +41,16 @@ export class CountdownPersistanceService {
 
   getPoem(){
     return this.poem;
+  }
+
+  setPoem(val){
+    this.poem = val;
+  }
+
+  public clearData(){
+    this.birthDate = null;
+    this.countdownData = null;
+    this.poem = null;
+    this.isBirthday = false;
   }
 }

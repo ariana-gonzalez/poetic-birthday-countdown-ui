@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.countdownP.clearData();
   }
 
   ngOnChanges(changes: SimpleChanges){
@@ -62,7 +63,7 @@ export class HomeComponent implements OnInit {
         setTimeout(() => {
           this.spinner.hide();
           this.router.navigate(['my-countdown'])
-        }, 4000);
+        }, 1000);
       })
   }
 

@@ -26,8 +26,6 @@ export class CountdownComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    if(!this.countdownP.getHasValue()) this.router.navigate(['../home']);
-    console.log(this.countdownP.getHasValue());
     this.countdownData = this.countdownP.getCountdownData();
     if(!this.countdownData || this.countdownData == null || this.countdownData == undefined){
       this.router.navigate(['../home']);
@@ -37,17 +35,13 @@ export class CountdownComponent implements OnInit {
       if(this.isBirthday){
         this.poem = this.countdownP.getPoem();
       }
+      this.countdownP.clearData();
     }
   }
 
-  ngOnChanges(){
-    if(this.countdownData == null || this.countdownData == undefined)
-      this.router.navigate(['home']);
+  ngOnDestroy(){
+    this.countdownP.clearData();
   }
 
-  ngOnDestroy(){
-    this.countdownP.setCountdownData(null);
-    this.countdownP.setHasValue(false);
-  }
 
 }
