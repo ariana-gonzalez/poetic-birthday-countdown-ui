@@ -1,0 +1,21 @@
+<div
+  class="modal fade custom-modal"
+  id="poems-modal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-body">  
+            <div class="scrollable-text">
+                <div class="custom-label name">{{poem.title}}</div>
+                <div class="star-container stars">
+                </div>
+                <div id="comment" class="custom-label">{{poem.content}}</div>
+                <div class="poet-name">{{poem.poet?.name}}</div> 
+            </div>
+        </div>               
+    </div>
+  </div>
+</div>

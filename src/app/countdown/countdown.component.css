@@ -1,0 +1,46 @@
+.name, .label, .birthdate, .age, .mini-age, .result{
+    font-family: ubuntu;
+    color: white;
+    margin: 15px;
+}
+
+.bd-img{
+    top: -18px;
+}
+
+.name{
+    font-size: 53px;
+    font-weight: bold;
+}
+
+.label{
+    font-size: 34px;
+    margin: 0;
+}
+
+.birthdate{
+    font-size: 40px;
+}
+
+.age{
+    font-size: 45px;
+}
+
+.mini-age{
+    font-size: 22px;
+    font-style: italic;
+}
+
+.result{
+    font-size: 112px;
+    color: darkcyan;
+}
+
+.main-container{
+    display: flex;
+    flex-flow: column;
+    height: 770px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}

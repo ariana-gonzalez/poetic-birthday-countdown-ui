@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500&display=swap');
+@import '~bootstrap/dist/css/bootstrap.min.css';
+html,
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #1c1b29;
+}
+
+ngb-datepicker {
+    border: 1px solid #dfdfdf;
+    border-radius: .25rem;
+    display: inline-block;
+    background-color: white;
+    font-family: ubuntu;
+    margin-top: 5px;
+}
+
+input:focus, .calendar:focus, button:focus{
+  outline: none !important;
+  box-shadow: 0 0 10px #727286 !important;
+}
+
+.btn-submit{
+  height: 60px;
+  width: 230px;
+  font-family: ubuntu;
+  color: white;
+  border-radius: 100px;
+  font-size: 20px;
+  border: none;
+  margin-top: 50px;
+  cursor: pointer;
+  background-color: darkcyan;
+  font-weight: bold;
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: rgb(2, 119, 119);
+}
+
+::-webkit-scrollbar-thumb{
+  background-color:  #272633;
+  border-radius: 100px;
+}
+
+.bd-img{
+  position: fixed;
+  align-self: end;
+}

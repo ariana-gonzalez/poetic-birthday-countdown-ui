@@ -1,0 +1,48 @@
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size = "medium" color = "#008b8b" type = "square-jelly-box" [fullScreen] = "true"></ngx-spinner>
+<div class="main-container">
+  <img class="bd-img" src="../../assets/778-7789077_happy-birthday-png-photo-winter-class-party-list.png">
+    <span class="birthday-title">¿Sabes cuántos días faltan para tu cumpleaños?</span>
+    <span class="birthday-subtitle">¡Averígualo aquí!</span>
+    <form class="form-inline">
+        <div >
+            <div class="custom-label" for="names">Nombres</div>
+            <input 
+                id="names" 
+                class="form-control custom-input" 
+                type="text" 
+                placeholder="Ingrese nombres"
+                (keyup)="setNames($event.target.value)"
+            >
+        </div>
+        <div >
+          <div class="custom-label" for="lastnames">Apellidos</div>
+            <input 
+                id="lastnames" 
+                class="form-control custom-input" 
+                type="text" 
+                placeholder="Ingrese apellidos"
+                (keyup)="setLastnames($event.target.value)"
+            >
+        </div>
+        <div >
+            <div class="custom-label" for="birthdate">Fecha de Nacimiento</div>
+          <div class="input-group" style="display: flex;">
+            <input 
+                [maxDate]="getToday()"
+                id="birthdate"
+                class="form-control custom-input prepend" 
+                placeholder="yyyy-mm-dd"
+                name="dp" 
+                ngbDatepicker 
+                #d="ngbDatepicker"
+                (dateSelect)="setBirthDate($event)">
+            <div class="input-group-append">
+              <button class="calendar" (click)="d.toggle()" type="button"><fa-icon [icon]="faCalendar"></fa-icon></button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <br>
+      <button [disabled]="!isValid" ngStyle="" type="button" class="btn btn-md btn-submit" (click)="getBirthdayCountdown()">¡Quiero saber!</button>
+</div>
+

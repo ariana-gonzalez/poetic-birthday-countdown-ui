@@ -1,0 +1,78 @@
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    height: 920px;
+    flex-flow: column wrap;
+    font-family: ubuntu;
+}
+
+.btn-submit{
+    z-index: 10000;
+}
+
+fa-icon{
+    color: #1c1b29;
+}
+
+.birthday-title{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+.birthday-subtitle{
+    color: white;
+    font-size: 30px;
+    font-style: italic;
+    margin-top: 12px;
+    margin-bottom: 100px;
+}
+
+.custom-input{
+    height: 40px;
+    width: 259px;
+    border-radius: 10px;
+    border: none;
+    font-family: ubuntu;
+    margin: 20px;
+    padding: 0 10px;
+}
+
+.custom-label{
+    color: white;
+    font-family: ubuntu;
+    margin: 0 20px;
+}
+
+form{
+    display: flex;
+    z-index: 10000;
+}
+
+.custom-input.prepend{
+    margin: 20px 0 20px 20px !important;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    width: 219px;
+}
+
+.input-group-append{
+    margin: 20px 20px 20px 0 !important;
+}
+
+.calendar{
+    height: 40px;
+    width: 40px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+

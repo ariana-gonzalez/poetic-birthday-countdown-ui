@@ -1,29 +1,27 @@
-
-# PoeticBirthdayCoundownApp
-
-Web UI for Poetic Birthday Countdown project
+# Poetic Birthday Countdown UI
+Angular client for Poetic Birthday Countdown REST API.
+Interface for seeing days until birthday or a random poem if it's your birthday.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.6.
 
-## Development server
+REST API: [https://github.com/ariana-gonzalez/poetic-birthday-countdown](https://github.com/ariana-gonzalez/poetic-birthday-countdown)
+
+## To run it:
+npm intall
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+Once ran it can be accessed in the following link:
+[http://localhost:4200/](http://localhost:4200/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+NOTE: The REST API ([https://github.com/ariana-gonzalez/poetic-birthday-countdown]) must be running for it to function. For instructions got to the repository's README.md
 
-## Build
+## Requirements:
+Angular CLI: 10.0.6
+Node: 12.18.2
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Version:
+Last version available in branch master.
 
 ## Further help
 

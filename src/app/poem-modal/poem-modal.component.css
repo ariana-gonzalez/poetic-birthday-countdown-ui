@@ -1,0 +1,57 @@
+.modal{
+    font-family: ubuntu;
+}
+
+.modal-dialog{
+    max-width: 700px !important;
+}
+
+.poet-name{
+    margin-left: auto;
+    color: white;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.modal-content{
+    border-radius: 20px;
+    margin-top: 150px;
+    background-color: transparent;
+}
+
+.modal-body {
+    flex-flow: row wrap;
+    padding: 17px 32px;
+    background-color: teal;
+    border-radius: 15px;
+}
+
+.scrollable-text{
+    overflow-y: auto;
+    max-height: 700px;
+    margin-top: 10px;
+    padding-right: 7px;
+    display: flex;
+    flex-flow: column;
+}
+
+#comment{
+    margin-top: 18px;
+    font-style: italic;
+    white-space: break-spaces;
+}
+
+.custom-label {
+    object-fit: contain;
+    font-family: ubuntu;
+    font-size: 18px;
+    line-height: 1.3;
+    text-align: left;
+    color: white;
+}
+
+.name{
+    width: 50%;
+    font-size: 20px;
+}
+

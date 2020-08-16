@@ -1,0 +1,17 @@
+<img class="bd-img" src="../../assets/778-7789077_happy-birthday-png-photo-winter-class-party-list.png">
+<div class="main-container" *ngIf="countdownData">
+    <span *ngIf="!isBirthday" class="name">¡Hey! {{countdownData.name}}</span>
+    <span *ngIf="isBirthday" class="name">¡Feliz cumpleaños {{countdownData.name}}!</span>
+    <span class="birthdate">Ya veo, naciste el {{birthdate}} y tienes {{countdownData.age}} {{countdownData.age == 1? "año" : "años"}}</span>
+    <span *ngIf="!isBirthday" class="mini-age">({{countdownData.ageText}} si te gusta ser específico)</span>
+    <span *ngIf="isBirthday" class="mini-age">¡Tenemos un poema para ti por tu cumpleaños!</span>
+    <br>
+    <div *ngIf="!isBirthday" class="not-birthday">
+        <span class="result">{{countdownData.countdownResult}} {{countdownData.countdownResult == 1? "día" : "días"}}</span>
+        <div class="label">Hasta tu próximo cumpleaños</div>
+    </div>
+    <div *ngIf="isBirthday && poem" class="birthday">
+        <button type="button" class="btn btn-md btn-submit" data-toggle="modal" data-target="#poems-modal">¡Ver mi poema!</button>
+    </div>
+</div>
+<app-poem-modal *ngIf="poem" [poem]="poem"></app-poem-modal>
