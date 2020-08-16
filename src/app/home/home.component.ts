@@ -1,8 +1,7 @@
-import { Component, OnInit, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import { ServiceCallerService } from '../shared/services/service-caller.service';
 import { UtilService } from '../shared/helpers/util.service';
 import { countdownController } from '../shared/constants'
-import { CountdownData } from '../shared/models/CountdownData';
 import { CountdownRequest } from '../shared/models/CountdownRequest';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
 import * as moment from 'moment';
@@ -10,8 +9,6 @@ import { CountdownPersistanceService } from '../shared/services/countdown-persis
 import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { faCalendar } from '@fortawesome/free-solid-svg-icons';
-
-
 
 @Component({
   selector: 'app-home',
@@ -43,13 +40,11 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  private checkRequestValidity(){
-    if(!this.countdownRequest.birthDate) return false;
-    if(!this.countdownRequest.lastnames) return false;
-    if(!this.countdownRequest.names) return false;
-    return true;
-  }
-
+  
+  /**
+   * Sends the request data (names, lastnames and date of birth) to the countdown api
+   * and gets the countdown data
+   */
   public getBirthdayCountdown(){
     this.spinner.show()
     this.util.returnObservableResponse(
@@ -57,33 +52,62 @@ export class HomeComponent implements OnInit {
         countdownController.getBirthdayCountdown + 
         '?birthDate=' + this.countdownRequest.birthDate + '&lastnames=' + 
         this.countdownRequest.lastnames + '&names=' + this.countdownRequest.names
-      )).then((resp)=>{
-        this.countdownP.setCountdownData(resp);
-        this.countdownP.setBirthDate(this.countdownRequest.birthDate);
-        setTimeout(() => {
-          this.spinner.hide();
-          this.router.navigate(['my-countdown'])
-        }, 1000);
-      })
-  }
+        )).then((resp)=>{
+          this.countdownP.setCountdownData(resp);
+          this.countdownP.setBirthDate(this.countdownRequest.birthDate);
+          setTimeout(() => {
+            this.spinner.hide();
+            this.router.navigate(['my-countdown'])
+          }, 1000);
+        })
+      }
+      
+      /**
+       * Checks whether the request data is valid and can be sent
+       */
+      private checkRequestValidity(){
+        if(!this.countdownRequest.birthDate) return false;
+        if(!this.countdownRequest.lastnames) return false;
+        if(!this.countdownRequest.names) return false;
+        return true;
+      }
 
-  setBirthDate(datePicker: NgbDateStruct): void{
-    this.countdownRequest.birthDate = this.format(datePicker);
-    this.isValid = this.checkRequestValidity();
-  }
-
-  setNames(val){
-    this.countdownRequest.names = val;
-    this.isValid = this.checkRequestValidity();
-  }
-
-  setLastnames(val){
-    this.countdownRequest.lastnames = val;
-    this.isValid = this.checkRequestValidity();
-  }
-
-  getToday(){
-    let today = new Date();
+      /**
+       * Used by the birthdate input to set the date of birth and validate
+       * the request
+       * @param datePicker date of birth
+       */
+      setBirthDate(datePicker: NgbDateStruct): void{
+        this.countdownRequest.birthDate = this.format(datePicker);
+        this.isValid = this.checkRequestValidity();
+      }
+      
+      /**
+       * Used by the names input to set the persons names and then validate
+       * the request
+       * @param val names
+       */
+      setNames(val){
+        this.countdownRequest.names = val;
+        this.isValid = this.checkRequestValidity();
+      }
+      
+      /**
+       * Used by the lastnames input to set the persons lastnames and then
+       * validate the request
+       * @param val lastnames
+       */
+      setLastnames(val){
+        this.countdownRequest.lastnames = val;
+        this.isValid = this.checkRequestValidity();
+      }
+      
+      /**
+       * Gets current date with the datepicker structure
+       * to set the maximun date allowed as today
+       */
+      getToday(){
+        let today = new Date();
     let calendarDate =  {
       year: today.getFullYear(),
       month: today.getMonth() + 1,
@@ -92,6 +116,11 @@ export class HomeComponent implements OnInit {
     return calendarDate;
   }
 
+  /**
+   * Formats the datepicker chosen date to a string with
+   * the necessary structure for the request
+   * @param date 
+   */
   format(date: NgbDateStruct): string {
       if (!date) return '';
       let mdt = moment([date.year, date.month - 1, date.day]);

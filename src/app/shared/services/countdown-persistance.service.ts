@@ -2,6 +2,10 @@ import { Injectable } from '@angular/core';
 import { CountdownData } from '../models/CountdownData';
 import { Poem } from '../models/Poem';
 
+/**
+ * Service used to exchange data between
+ *  the countdown and home components
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -47,6 +51,9 @@ export class CountdownPersistanceService {
     this.poem = val;
   }
 
+  /**
+   * Method for clearing the data in all the attributes 
+   */
   public clearData(){
     this.birthDate = null;
     this.countdownData = null;

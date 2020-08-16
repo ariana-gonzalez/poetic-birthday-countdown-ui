@@ -25,6 +25,14 @@ export class CountdownComponent implements OnInit {
   ) {
    }
 
+   /**
+    * Gets the countdown data from the countdown service.
+    * If the data doesn't exist it navigates back to home.
+    * It sets variables used for showing information with 
+    * the request data in the html
+    * At the end it clears the data as it is already in the
+    * local attributes.
+    */
   ngOnInit(): void {
     this.countdownData = this.countdownP.getCountdownData();
     if(!this.countdownData || this.countdownData == null || this.countdownData == undefined){
@@ -39,6 +47,10 @@ export class CountdownComponent implements OnInit {
     }
   }
 
+  /**
+   * Clears countdown service data on destroy to avoid getting the wrong data 
+   * in the next data retrieval from the countdown service
+   */
   ngOnDestroy(){
     this.countdownP.clearData();
   }

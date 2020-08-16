@@ -19,6 +19,10 @@ export class ServiceCallerService {
     private http: HttpClient
   ) {}
 
+  /**
+   * Method for making GET http calls based on a url
+   * @param url request url
+   */
   public get(url: string){
     this.httpHeaders["Access-Control-Allow-Methods"] = 'GET';
     return this.http.get(url, { headers: new HttpHeaders(this.httpHeaders)});

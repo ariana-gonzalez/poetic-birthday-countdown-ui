@@ -11,7 +11,6 @@ export class PoemModalComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('INIT')
   }
 
 }
