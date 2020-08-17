@@ -8,6 +8,12 @@ REST API: [https://github.com/ariana-gonzalez/poetic-birthday-countdown](https:/
 
 ![](images/poetic-birthday-home.jpg)
 
+![](images/poetic-birthday-congrats.jpg)
+
+![](images/poetic-birthday-poem.jpg)
+
+![](images/poetic-birthday-countdown.jpg)
+
 ## To run it:
 npm intall
 
@@ -28,3 +34,4 @@ Last version available in branch master.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
