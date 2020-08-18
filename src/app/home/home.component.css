@@ -5,6 +5,7 @@
     vertical-align: middle;
     flex-flow: column wrap;
     font-family: ubuntu;
+    height: 100%;
 }
 
 .btn-submit{
@@ -29,6 +30,7 @@ fa-icon{
     font-style: italic;
     margin-top: 12px;
     margin-bottom: 100px;
+    z-index: 10;
 }
 
 .custom-input{
@@ -76,3 +78,7 @@ form{
     cursor: pointer;
 }
 
+#my-canvas{
+  position: fixed;
+  height: 100%;
+}
