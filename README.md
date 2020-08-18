@@ -1,4 +1,4 @@
-# Poetic Birthday Countdown UI
+# :tada: Poetic Birthday Countdown UI 
 Angular client for Poetic Birthday Countdown REST API.
 Interface for seeing days until birthday or a random poem if it's your birthday.
 
@@ -14,7 +14,7 @@ REST API: [https://github.com/ariana-gonzalez/poetic-birthday-countdown](https:/
 
 ![](images/poetic-birthday-countdown.jpg)
 
-## To run it:
+## :rocket: To run it:
 npm intall
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -24,14 +24,16 @@ Once ran it can be accessed in the following link:
 
 NOTE: The REST API ([https://github.com/ariana-gonzalez/poetic-birthday-countdown]) must be running for it to function. For instructions got to the repository's README.md
 
-## Requirements:
+## :wrench: Requirements:
 Angular CLI: 10.0.6
 Node: 12.18.2
 
-## Version:
+## :white_check_mark: Version:
 Last version available in branch master.
 
-## Further help
+## :sos: Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+Made with :sparkling_heart:
 
