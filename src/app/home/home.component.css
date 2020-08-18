@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     vertical-align: middle;
-    height: 920px;
     flex-flow: column wrap;
     font-family: ubuntu;
 }
@@ -17,15 +16,16 @@ fa-icon{
 }
 
 .birthday-title{
+    margin-top: 120px;
     color: white;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     z-index: 10;
 }
 
 .birthday-subtitle{
     color: white;
-    font-size: 30px;
+    font-size: 27px;
     font-style: italic;
     margin-top: 12px;
     margin-bottom: 100px;
