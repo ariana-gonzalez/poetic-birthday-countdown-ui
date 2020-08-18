@@ -8,10 +8,6 @@
     height: 100%;
 }
 
-.btn-submit{
-    z-index: 10000;
-}
-
 fa-icon{
     color: #1c1b29;
 }
@@ -78,7 +74,3 @@ form{
     cursor: pointer;
 }
 
-#my-canvas{
-  position: fixed;
-  height: 100%;
-}
