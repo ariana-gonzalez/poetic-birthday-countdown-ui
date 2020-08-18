@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 REST API: [https://github.com/ariana-gonzalez/poetic-birthday-countdown](https://github.com/ariana-gonzalez/poetic-birthday-countdown)
 
-![](images/poetic-birthday-home.jpg)
+![](images/home-confetti-animation.jpg)
 
 ![](images/poetic-birthday-congrats.jpg)
 
